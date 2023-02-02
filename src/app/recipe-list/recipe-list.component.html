@@ -1,14 +1,15 @@
 <h2>Recipes</h2>
-<div>
-<br>
-<h4>{{selectedRecipe.name}}</h4>
-<p>{{selectedRecipe.description}}</p>
-<br>
+
+<div *ngIf="selectedRecipe">
+  <br />
+  <h4>{{ selectedRecipe.name }}</h4>
+  <p>{{ selectedRecipe.description }}</p>
+  <br />
 </div>
 
 <!--Recipe Names-->
 <div *ngFor="let recipe of recipes">
-    <p>
-        {{recipe.name}}
-    </p>
+  <p (click)="onSelect(recipe)" style="cursor: pointer">
+    {{ recipe.name }}
+  </p>
 </div>

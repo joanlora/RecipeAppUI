@@ -20,4 +20,8 @@ export class RecipeListComponent {
 
   ngOnInit(): void{}
 
+  onSelect(recipe: any): void{
+    this.selectedRecipe = recipe
+  }
+
 }
