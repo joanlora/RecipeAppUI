@@ -1,15 +1,19 @@
-<h2>Recipes</h2>
+<div class="container">
+  <h2>Recipes</h2>
 
-<div *ngIf="selectedRecipe">
-  <br />
-  <h4>{{ selectedRecipe.name }}</h4>
-  <p>{{ selectedRecipe.description }}</p>
-  <br />
-</div>
+  <div *ngIf="selectedRecipe">
+    <br />
+    <h4>{{ selectedRecipe.name }}</h4>
+    <p>{{ selectedRecipe.description }}</p>
+    <br />
+  </div>
 
-<!--Recipe Names-->
-<div *ngFor="let recipe of recipes">
-  <p (click)="onSelect(recipe)" style="cursor: pointer">
-    {{ recipe.name }}
-  </p>
+  <!--Recipe Names-->
+  <div *ngFor="let recipe of recipes" class = "">
+    <p (click)="onSelect(recipe)" style="cursor: pointer;">
+      {{ recipe.name }}
+    </p>
+    <a [routerLink]="['/recipes', recipe.id]" >Edit</a>
+  </div>
+  <a [routerLink]="['/recipes']" class="btn btn-primary"> Add Recipe</a>
 </div>
