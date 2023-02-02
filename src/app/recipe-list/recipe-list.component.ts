@@ -24,4 +24,9 @@ export class RecipeListComponent {
     this.selectedRecipe = recipe
   }
 
+  onDelete(recipe:any): void{
+    this.recipes = this.recipes.filter(obj => obj.id != recipe.id);
+    // TODO: Call backend delete and list refresh here and remove line above
+  }
+
 }
