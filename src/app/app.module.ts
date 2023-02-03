@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeFormComponent } from './recipe-form/recipe-form.component';
 import { FormsModule } from '@angular/forms';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 // updates imports for you when using ng generate component
 
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
